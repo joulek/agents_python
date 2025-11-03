@@ -61,7 +61,7 @@ async def chatbot_agent(prompt: Prompt):
     print("🤖 Groq reply:", groq_reply)
 
     # 🔸 Détection mots-clés => appel CoachAgent
-    should_call_coach = any(trigger in user_input for trigger in TRIGGERS)
+    should_call_coach = any(trigger in user_input for trigger in triggers)
     coach_message = ""
 
     if should_call_coach:
